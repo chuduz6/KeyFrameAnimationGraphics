@@ -1,0 +1,66 @@
+<scene>
+  <camera>
+    <origin>0 0.5 -2</origin>
+    <z>0 0 -1</z>
+    <y>0 1 0</y>
+    <yfov>45</yfov>
+    <xfov>45</xfov>
+    <xResolution>512</xResolution>
+    <yResolution>512</yResolution>
+  </camera>
+  <lights>
+    <light class="PointLight">
+      <intensity>0.8 0.8 0.8</intensity>
+      <position>2 4 2</position>
+    </light>
+    <light class="PointLight">
+      <intensity>0.2 0.2 0.2</intensity>
+      <position>0 0 5</position>
+    </light>
+  </lights>
+  <hierarchyRoot class="Transform">
+    <translation>0 0 0</translation>
+    <rotation>0 0 0</rotation>
+    <scale>1 1 1</scale>
+  	<children>
+  	  <child class="Transform">
+        <translation>0 0 0</translation>
+        <rotation>0 0 0</rotation>
+        <scale>1 1 1</scale>
+        <translationVariation class="KeyframeBezierSpline">
+          <keyframeTimes>0 1 2 3 4</keyframeTimes>
+          <keyframeControlPoints>
+            0 0.0 0
+            0 0.5 0
+            0 1.0 0
+            0 1.0 0
+            0 1.0 0
+            0 1.0 0
+            0 0.5 0
+            0 0.0 0
+            0 0.0 0
+            0 0.5 0
+            0 1.0 0
+            0 1.0 0
+            0 1.0 0
+            0 1.0 0
+            0 0.5 0
+            0 0.0 0
+          </keyframeControlPoints>
+        </translationVariation>
+  	    <children>
+  	      <child class="Sphere">
+  	        <material class="Phong">
+  	          <diffuse>0 1 0</diffuse>
+  	          <specular>1 1 1</specular>
+     	      <exponent>15</exponent>
+  	        </material>
+  	        <position>0 0 0</position>
+  	        <radius>1</radius>
+  	        <tesselationLevel>3</tesselationLevel>
+  	      </child>
+  	    </children>
+  	  </child>
+  	</children>
+  </hierarchyRoot>
+</scene>

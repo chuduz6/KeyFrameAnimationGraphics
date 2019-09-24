@@ -1,0 +1,50 @@
+<scene>
+  <camera>
+    <origin>0 -1.5 -2</origin>
+    <z>0 0 -1</z>
+    <y>0 1 0</y>
+    <yfov>45</yfov>
+    <xfov>45</xfov>
+    <xResolution>512</xResolution>
+    <yResolution>512</yResolution>
+  </camera>
+  <lights>
+    <light class="PointLight">
+      <intensity>0.8 0.8 0.8</intensity>
+      <position>2 4 2</position>
+    </light>
+    <light class="PointLight">
+      <intensity>0.2 0.2 0.2</intensity>
+      <position>0 0 5</position>
+    </light>
+  </lights>
+  <hierarchyRoot class="Transform">
+    <translation>0 0 0</translation>
+    <rotation>0 0 0</rotation>
+    <scale>1 1 1</scale>
+  	<children>
+  	  <child class="ParticleSystem">
+  	    <numParticles>100</numParticles>
+  	    <ageMin>0.1</ageMin>
+  	    <ageMax>10.0</ageMax>
+  	    <source class="ParticlePointSource">
+  	      <position>0 0 0</position>
+  	      <velocityMin>0</velocityMin>
+  	      <velocityMax>3</velocityMax>
+  	      <color>0.5 0.5 0.5</color>
+  	      <colorVariation>1 1 1</colorVariation>
+  	    </source>
+  	    <forces>
+  	      <force class="ParticleConstantForce">
+  	        <force>0 -10 0</force>
+  	      </force>
+  	    </forces>
+        <geometry class="Sphere">
+  	      <position>0 0 0</position>
+  	      <radius>0.01</radius>
+  	      <tesselationLevel>0</tesselationLevel>
+  	    </geometry>
+  	  </child>
+  	</children>
+  </hierarchyRoot>
+</scene>
